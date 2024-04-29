@@ -21,7 +21,6 @@ This repository contains the code for a website promoting work opportunities in 
 7. **Footer:** Contains social media links, contact information, and copyright notice.
 
 ## Usage
-To view the website locally, simply open the [index.html]() file in a web browser. You can also host the website on a web server to make it accessible online.
+To view the website locally, simply open the **index.html** file in a web browser. You can also host the website on a web server to make it accessible online.
 
-## Live website link: 
-https://lakshmi-321.github.io/lakshmi-321.github.io2/
+[Live website link](https://lakshmi-321.github.io/lakshmi-321.github.io2/)
