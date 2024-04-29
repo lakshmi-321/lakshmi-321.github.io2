@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Contact Us</title>
+    
+    <style> 
+        #google_translate_element { height: 26px !important; overflow: hidden !important; }
+
+    </style>
+</head>
+<body>
+    <div id="google_translate_element"></div> <!-- Google Translate Widget -->
+       <!-- Google Translate Script -->
+       <script type="text/javascript">
+        function googleTranslateElementInit() {
+          new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+        }
+        </script>
+        
+        <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+        
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <span class="logo"><img src="home _imgs/webiste-logo.jpg" alt="Logo image"></span>
+            <nav>
+                <ul>
+                    <li><a href="index.html" >Home</a></li>
+                    <li><a href="job-listings.html">Jobs</a></li>
+                    <li><a href="about.html">About Japan</a></li>
+                    <li><a href="index.html#testimonials">Testimonials</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- Contact Form -->
+    <div class="contact-form" id="contactForm">
+        <h2 >Contact Us</h2>
+        <form action="#" method="post"id="formElement">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+
+    <!-- Contact Information Sidebar -->
+    <div class="contact-page-info">
+        <h2 style="padding: 15px 0;">Contact Information</h2>
+        <p>123 Sakura Street,<br> Chiyoda-ku, Tokyo 100-0001,<br> Japan</p>
+        <p>Phone: +1234567890</p>
+        <p>Email: info@example.com</p>
+        <!-- Embedded Google Map -->
+        <div class="map-container">
+            <!-- Replace the src attribute with the URL of your embedded Google Map -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.6068050782797!2d139.75050791525812!3d35.68283988019444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188c196dc3f7cf%3A0xf2ae55946d54fc8d!2sTokyo%2C%20Japan!5e0!3m2!1sen!2sus!4v1646835580229!5m2!1sen!2sus" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </div>
+        <script src="script.js"></script>
+    
+</body>
+</html>

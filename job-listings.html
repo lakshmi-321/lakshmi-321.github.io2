@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Job Search</title>
+
+    <style> 
+        #google_translate_element { height: 26px !important; overflow: hidden !important; }
+
+    </style>
+</head>
+<body>
+    <div id="google_translate_element"></div> <!-- Google Translate Widget -->
+    <!-- Google Translate Script -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+          new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+        }
+        </script>
+        
+        <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+ <!-- Header -->
+    <header>
+        <div class="header-container">
+            <span class="logo"><img src="home _imgs/webiste-logo.jpg" alt="Logo image"></span>
+            <nav>
+                <ul>
+                    <li><a href="index.html"  >Home</a></li>
+                    <li><a href="job-listings.html" class="active">Jobs</a></li>
+                    <li><a href="about.html">About Japan</a></li>
+                    <li><a href="index.html#testimonials">Testimonials</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <div class="Listings-container">
+        <div class="sidebar">
+            <h2>Filter Section</h2>
+            <form id="filterForm"> <!-- Add ID to the form element -->
+                <label for="job-category">Job Category:</label>
+                <select id="job-category">
+                    <option value="all">All</option>
+                    <option value="Software Engineer"> Software Engineer</option>
+                    <option value="Data Analyst">Data Analyst</option>
+                    <option value="Devops Engineer">Devops Engineer</option>
+                    <option value="Project Manager">Project Manager</option>
+                </select>
+                <label for="location">Location:</label>
+                <select id="location">
+                    <option value="all">All</option>
+                    <option value="Fukuoka">Fukuoka</option>
+                    <option value="Nashville">Nashville</option>
+                    <option value="Japan">Japan</option>
+                    <option value="Tokyo">Tokyo</option>
+                </select>
+                <label for="salary-range">Salary Range:</label>
+                <select id="salary-range">
+                    <option value="all">All</option>
+                    <option value="¥0 - ¥50,000">¥0 - ¥50,000</option>
+                    <option value="¥50,000 -¥100,000">¥50,000 -¥100,000</option>
+                    <option value="¥0 -¥5M">¥0 -¥5M</option>
+                    <option value="¥5M -¥10M">¥5M -¥10M</option>
+                    <option value="¥10M -¥50M">¥10M -¥50M</option>
+                    <option value="¥50M -¥100M">¥50M -¥100M</option>
+                </select>
+                <label for="job-type">Job Type:</label>
+                <select id="job-type">
+                    <option value="all">All</option>
+                    <option value="Full-Time">Full Time</option>
+                    <option value="Part-Time">Part Time</option>
+                    <option value="Hybrid">Hybrid</option>
+                </select>
+                <label for="experience-level">Experience Level:</label>
+                <select id="experience-level">
+                    <option value="all">All</option>
+                    <option value="Entry-level">Entry Level</option>
+                    <option value="Mid-level">Mid Level</option>
+                    <option value="Senior-level">Senior Level</option>
+                </select>
+                <label for="Skills">Skills :</label>
+                <select id="Skills">
+                    <option value="all">All</option>
+                    <option value="MySQL">MySQL</option>
+                    <option value="data science">Data science</option>
+                    <option value="Python">Python</option>
+                    <option value="BI tools">BI tools</option>
+                    <option value="RDMS">RDMS</option>
+                    <option value="Machine learning">Machine learning</option>
+                    <option value="SAP">SAP</option>
+                    <option value="SCM">SCM</option>
+                </select>
+                <button type="submit">Apply Filters</button>
+            </form>
+        </div>
+        <div class="job-sections">
+            <header class="Listings-header">
+                <button id="allJobsBtn">All Jobs</button>
+                <button id="savedJobsBtn">Saved Jobs</button>
+                <!-- <button id="appliedJobsBtn">Applied Jobs</button> -->
+                
+            </header>
+            <div class="job-section active" id="allJobs">
+                <h2>Job Cards</h2>
+                <div class="job-cards">
+                    <div class="job-card" data-job-id="1" data-keywords="software engineer,all,senior-level,Fukuoka,full-time,¥5M -¥10M,MySQL">
+                        <img src="joblistings_imgs/Accredify_Logo.png" alt="Company Logo">
+                        <div class="job-card-content">
+                            <h3>Senior Software Engineer</h3>
+                            <p>Location: Fukuoka</p>
+                            <p>Salary Range: ¥6M - ¥9M</p>
+                        </div>
+                        <button class="apply-btn" data-job-id="1">Apply Now</button>
+                        <button class="bookmark-btn" title="Bookmark"><i class="far fa-bookmark"></i></button>
+                    </div>
+                    <div class="job-card" data-job-id="2" data-keywords="Data Analyst,all,Mid-level,Japan,full-time,¥5M -¥10M,data science,Python, BI tools">
+                        <img src="joblistings_imgs/human_logo.jpg" alt="Company Logo">
+                        <div class="job-card-content">
+                            <h3>Data Scientist Analyst</h3>
+                            <p>Location: Japan</p>
+                            <p>Salary Range: ¥5M - ¥10M</p>
+                        </div>
+                        <button class="apply-btn" data-job-id="2">Apply Now</button>
+                        <button class="bookmark-btn"title="Bookmark"><i class="far fa-bookmark"></i></button>
+                    </div>
+                    <div class="job-card" data-job-id="3" data-keywords="devops engineer,all,Mid-level,senior-level,Tokyo,full-time,¥5M -¥10M, RDMS,Machine learning">
+                        <img src="joblistings_imgs/nearme-logo.webp" alt="Company Logo">
+                        <div class="job-card-content">
+                            <h3>Devops Engineer</h3>
+                            <p>Location: Tokyo</p>
+                            <p>Salary Range: ¥5M - ¥10M</p>
+                        </div>
+                        <button class="apply-btn" data-job-id="3">Apply Now</button>
+                        <button class="bookmark-btn" title="Bookmark"><i class="far fa-bookmark"></i></button>
+                    </div>
+                    <div class="job-card" data-job-id="4" data-keywords="project manager,all,Entry-level,Tokyo,Hybrid,¥5M -¥10M,¥10M -¥50M,Machine learning">
+                        <img src="joblistings_imgs/money_logo.png" alt="Company Logo">
+                        <div class="job-card-content">
+                            <h3>Project Manager (AI/ML team)</h3>
+                            <p>Location: Tokyo</p>
+                            <p>Salary Range: ¥7.5M - ¥12M</p>
+                        </div>
+                        <button class="apply-btn" data-job-id="4">Apply Now</button>
+                        <button class="bookmark-btn" title="Bookmark"><i class="far fa-bookmark"></i></button>
+                    </div>
+                    <div class="job-card" data-job-id="5" data-keywords="project manager,all,Mid-level,Nashville ,Part-Time,¥5M -¥10M,SAP,SCM">
+                        <img src="joblistings_imgs/yazaki_logo.jpeg" alt="Company Logo">
+                        <div class="job-card-content">
+                            <h3>Project Manager, Gen Proj/Prog Mgmt</h3>
+                            <p>Location: Nashville</p>
+                            <p>Salary Range: ¥5.5M - ¥8M</p>
+                        </div>
+                        <button class="apply-btn" data-job-id="5">Apply Now</button>
+                        <button class="bookmark-btn" title="Bookmark"><i class="far fa-bookmark"></i></button>
+                    </div>
+                    <!-- Add more job cards as needed -->
+                </div>
+            </div>
+            <div class="job-section" id="savedJobs">
+                <!-- <h2>Saved Jobs</h2> -->
+                <!-- Saved Jobs will be dynamically added here -->
+                <div id="noJobsMessage" style="display: none;">No jobs bookmarked.</div>
+
+            </div>
+            <!-- <div class="job-section" id="appliedJobs">
+                <h2>Applied Jobs</h2>
+                 Applied Jobs will be dynamically added here 
+            </div> -->
+        </div>
+    </div>
+
+     <!-- Footer -->
+     <footer>
+        <div class="container">
+            <!-- <div class="footer-logo">Work in Japan</div> -->
+            <ul class="social-links">
+                <li><a href="https://www.facebook.com/jobsinjapan/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="https://www.linkedin.com/company/jobsinjapan.com/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                <!-- <li><a href="#"><i class="fab fa-instagram"></i></a></li> -->
+            </ul>
+            
+            <div class="contact-info">
+                <p>Contact Information:</p>
+                <p>C/O Global Village Media
+                    1-7-20-B2 Yaesu, Chuo-ku, Tokyo</p>
+                <p>Phone: +1234567890</p>
+                <p>Email: info@jobsinjapan.com</p>
+            </div>
+            
+            <p class="copyright">&copy; 2024 Work in Japan. All rights reserved.</p>
+        </div>
+    </footer>
+<script src="script.js"></script>   
+    
+</body>
+</html>
